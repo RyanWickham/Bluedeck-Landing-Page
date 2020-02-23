@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Montserrat&display=swap" rel="stylesheet">
+
+    <title>Bluedeck</title>
+    <link rel="shortcut icon" type="image/x-icon" href="./images/favicon.ico" />
+</head>
+<body>
+    <nav>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link active" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#menu">Menu</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
+    </nav>
+
+    <section id='home'>
+        <div class="hero-image">
+            <div class="hero-text">
+                <h1>Bluedeck</h1>
+                <p>Enjoy your coffee on the deck.</p>
+            </div>
+        </div>
+        <!-- <img src="./images/art-blue-brown-cafe-459489 (1).jpg" alt="Logo" class="logo"> -->
+    </section>
+
+    <div class="container">
+        <section id='about' class='p-2 my-4 mx-3'>
+            <h1 class='heading-label'>ABOUT</h1>
+            <div class="row">
+                <div class="col-12 col-md-5">
+                    <img class='img-fluid' src="./images/about-coffee-image.jpg" alt="A phot of a coffee mug and half a cookie.">
+                </div>
+                <div class="col-12 col-md-5 offset-md-1 text-center my-auto">
+                    <p>
+                        We believe our coffee is as beautiful as the beans we roast, 
+                        and we want to inspire you to celebrate that beauty, by using the finest, 
+                        seasonal, fair-trade, and sustainably grown coffee, in the best way possible.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <section id='menu' class='p-2 my-4 mx-3'>
+            <h1 class='heading-label'>MENU</h1>
+            <div class="row">
+                <div class="col-5">
+                    <ul>
+                        <li>Espresso Classic</li>
+                        <li>Cappuccino</li>
+                        <li>Café Latte</li>
+                        <li>English Toffee Latte</li>
+                        <li>Caramel Macchiato</li>
+                        <li>Café Mocha</li>
+                    </ul>
+                </div>
+                <div class="col-5 offset-2">
+                    <ul>
+                        <li>Iced Americano</li>
+                        <li>Iced Café Latte</li>
+                        <li>Iced Café Mocha</li>
+                        <li>Black Tea Latte</li>
+                        <li>Iced Ruby Tea</li>
+                        <li>Iced Shaken Lemon Tea</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <div class="parallax"></div>
+
+        <section id='contact' class='p-2 my-4 mx-3'>
+            <h1 class='heading-label'>CONTACT</h1>
+            <form onsubmit="contactFormSubmit(event)">
+                <div class="form-group">
+                    <label for="inputName">Name</label>
+                    <input type="text" class="form-control" id="inputName" placeholder="Alex Smith" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputEmail1">Email address</label>
+                    <input type="email" class="form-control" id="inputEmail" aria-describedby="emailHelp" placeholder="alexsmith@gmail.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="inputMessage">Message</label>
+                    <textarea class="form-control" id="inputMessage" rows="3" required></textarea>
+                </div>
+                <button class="btn btn-primary" type="submit">Submit form</button>
+                <span id="submissionConformationText"></span>
+            </form>
+        </section>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+</body>
+
+<script>
+    function contactFormSubmit(e){
+        e.preventDefault();
+        //collect data from form
+        let name = document.getElementById("inputName").value;
+        let email = document.getElementById("inputEmail").value;
+        let message = document.getElementById("inputMessage").value;
+
+        //send data off
+        console.log(name,email,message);
+        
+        //alert user of form submission
+        document.getElementById("submissionConformationText").innerHTML = "You Messages has been sent! :)";
+        return false;
+    }
+</script>
+</html>
