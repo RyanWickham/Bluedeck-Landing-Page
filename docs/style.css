@@ -78,7 +78,7 @@ body {
 
 /* Menu Section */
 #menu-left {
-    padding-left: 1em;
+    margin-left: 1em;
 }
 
 #menu ul li{
