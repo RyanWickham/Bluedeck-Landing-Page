@@ -79,7 +79,7 @@ body {
 /* Menu Section */
 
 #menu ul li{
-    list-style: disc inside;
+    list-style: disc outside;
     padding-bottom: 0.8em;
 }
 
